@@ -1,7 +1,9 @@
 import "./pyssiesStyle.css"
 import json from "../../static.json"
 
+
 function Pyssies(){
+
 return(
     <div className="pyssiesContainer">
         <h1 className="title">Pyssies</h1>
@@ -10,13 +12,12 @@ return(
                     return (
                         <div className="pyssyCard" key={idx}>
                             <p className="cardTitle">{item.Title}</p>
-                                <img src={`${item.Patch}`} alt=""  className="cardImage"/>
+                                <img src={item.Patch} alt="" className="cardImage"/>
                             <p className="cardDesc">{item.Desc}</p>
                             <div className="buyPussy">
                                 <p className="cardPrice">{item.Price}</p>
                                 <button className="btnBuyPussy">Buy this pussy</button>
                             </div>
-                            
                         </div>
                     )
                })}

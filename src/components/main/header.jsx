@@ -1,7 +1,11 @@
 import "./headerStyle.css"
 import { ReactComponent as Logo } from '../../images/logo.svg';
+import { useNavigate  } from "react-router-dom";
 
 function Header(){
+
+    const navigate =  useNavigate()
+
 return(
     <div className="header">
                 <Logo className="logo"/>
@@ -14,8 +18,8 @@ return(
     
         <div className="entraces">
             <ul>
-                <li>Sign-in</li>
-                <li>Sign-up</li>
+                <li onClick={(e) => navigate("signIn")}>Sign-in</li>
+                <li onClick={(e) => navigate("signUp")}>Sign-up</li>
             </ul>
         </div>
     </div>
